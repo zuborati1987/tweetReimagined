@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweetcool</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html"><h1>Tweetcool</h1></a>
+</header>
+
+<nav>
+    <ul>
+        <a href="index.html"><li>New tweet</li></a>
+        <a href="filter"><li>See tweets</li></a>
+    </ul>
+</nav>
+
+<div class="wrapper">
+    <div class="log-in-content">
+        <div class="container">
+            <div class="containerhead">
+                <div class="title">What is on your mind today?</div>
+            </div>
+
+            <form action="new-tweet" method="post">
+                <p>Name: <br><input type="text" name ="name" autofocus></p>
+                <p>Text: <br><textarea rows="10" cols="30" name="text"></textarea></p>
+                <input type="submit" value="Send tweet"/>
+
+            </form>
+            
+            <div class="containerfoot"></div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
