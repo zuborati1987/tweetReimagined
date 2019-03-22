@@ -3,7 +3,6 @@ package com.codecool.servlet;
 import com.codecool.model.Tweet;
 import com.codecool.service.TweetList;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,7 +29,6 @@ public class Tweetfilter extends HttpServlet {
         Date date;
 
 
-
         for (Tweet tweet : tweetList) {
             tempList.add(tweet);
         }
@@ -51,16 +49,16 @@ public class Tweetfilter extends HttpServlet {
 
 
         Iterator twitterator = tempList.iterator();
-        while(twitterator.hasNext()) {
+        while (twitterator.hasNext()) {
             Tweet currTweet = (Tweet) twitterator.next();
-            if((!(poster.equals("")) && !(currTweet.getName().equals(poster))) || ((currTweet.getTimestamp().compareTo(date) < 0) && (date != null))) {
+            if ((!(poster.equals("")) && !(currTweet.getName().equals(poster))) || ((currTweet.getTimestamp().compareTo(date) < 0) && (date != null))) {
                 System.out.println("Poster is: " + poster);
                 twitterator.remove();
                 System.out.println(tempList.size());
             }
         }
 
-        for(int i = offset; i < (limit + i); i++) {
+        for (int i = offset; i < (limit + i); i++) {
             if (i == tempList.size()) {
                 break;
             } else {

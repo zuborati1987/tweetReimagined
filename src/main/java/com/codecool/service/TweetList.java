@@ -11,6 +11,7 @@ public class TweetList implements Serializable {
 
     private static TweetList instance = new TweetList();
     private List<Tweet> tweets;
+
     private TweetList() {
         this.tweets = new ArrayList<>();
     }
