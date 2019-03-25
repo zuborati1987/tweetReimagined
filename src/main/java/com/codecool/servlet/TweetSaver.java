@@ -22,11 +22,6 @@ public class TweetSaver extends HttpServlet {
         TweetList tweeter = TweetList.getInstance();
         List<Tweet> tweetList = tweeter.getTweets();
         tweetList.add(new Tweet(name, tweet));
-        try {
-            tweeter.saveTweetList(tweeter.getTweets(), "tweetlist.ser");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         req.setAttribute("tweetList", tweetList);
         req.getRequestDispatcher("tweets.jsp").forward(req, resp);
 
